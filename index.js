@@ -754,7 +754,6 @@ const subTotalProducts = Listedproducts.map((element) =>({
  
     totalValue: element.priceTag * element.nosOfProduct // this is the new array where the total price of each laptop brand is stored products are stored
 
-     
 }))
 
 console.log(subTotalProducts)
@@ -795,8 +794,6 @@ const team = [
 
 const defendersOnly = team.filter((element, index, array) =>{
      return element.JerseyNo >= 6 // this returns the players with jersey no.6 and above
-     
-
 })
 console.log(defendersOnly)
 
@@ -807,4 +804,16 @@ const singleScores = scores.filter((element, index, array) => {
     return array.indexOf(element) == index //this shows the element of an index only, so when the element appears again, it skips it
 })
 
-console.log(...singleScores) // NB: the spread function ... can be understood above in
+console.log(...singleScores) // NB: the spread function ... can be understood above in the spread topic above
+
+// The array.reduce() method-  this reduces the entire element in the array into one by excuting a fucntion
+
+const totalScores = scores.reduce(sumtotal, 0)
+
+function sumtotal(accumulator, element){
+return accumulator + element
+
+} 
+console.log(totalScores)
+
+console.clear()
